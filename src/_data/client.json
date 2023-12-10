@@ -1,15 +1,15 @@
 {
-	"name": "Code Stitch Web Designs",
-	"email": "help@codestitch.app",
-	"phoneForTel": "555-779-4407",
-	"phoneFormatted": "(555) 779-4407",
+	"name": "Click and Mortar Designs",
+	"email": "alexg@clickmortar.app",
+	"phoneForTel": "970-814-6993",
+	"phoneFormatted": "(970) 814-6993",
 	"address": {
-		"lineOne": "First Address Line",
-		"lineTwo": "Second Address Line",
-		"city": "Denver",
+		"lineOne": "",
+		"lineTwo": "",
+		"city": "Grand Junction",
 		"state": "CO",
-		"zip": "80206",
-		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+		"zip": "81504",
+		"mapLink": "https://maps.app.goo.gl/MEBW3QEV3QM4KPVAA"
 	},
-	"domain": "www.codestitch.app"
+	"domain": "www.clickmortar.app"
 }
