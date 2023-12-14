@@ -351,6 +351,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #sbs-1362 {
+            background-color: var(--dark);
+
             .cs-topper {
                 color: var(--primary);
             }
@@ -579,8 +581,10 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #services-1378 {
+            background-color: var(--medium);
+
             .cs-item {
-                background-color: var(--medium);
+                background-color: var(--dark);
 
                 &:hover {
                     background-color: var(--accent);
@@ -940,7 +944,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #pricing-1386 {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: var(--dark);
 
             .cs-title,
             .cs-text {
@@ -952,11 +956,11 @@
             }
 
             .cs-info {
-                background-color: var(--medium);
+                background-color: var(--accent);
             }
 
             .cs-flex {
-                background-color: var(--dark);
+                background-color: var(--medium);
             }
 
             .cs-ul {
@@ -1017,7 +1021,7 @@
 @media only screen and (min-width: 0rem) {
     #stats-316 {
         padding: var(--sectionPadding);
-        background-color: #1a1a1a;
+        background-color: var(--medium);
 
         .cs-card-group {
             width: 100%;
@@ -1337,6 +1341,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #services-1290 {
+        background-color: var(--dark);
+
             .cs-topper {
                 color: var(--primaryLight);
             }
@@ -1630,6 +1636,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #sbs-1373 {
+        background-color: var(--medium);
+
             .cs-topper {
                 color: var(--primary);
             }
@@ -1932,7 +1940,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #contact-1388 {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: var(--dark);
             .cs-title,
             .cs-text,
             .cs-header,
