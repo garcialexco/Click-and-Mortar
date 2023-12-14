@@ -454,7 +454,7 @@
             /* 16px - 40px */
             padding: clamp(1rem, 3vw, 2.5rem);
             padding-top: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
             border-radius: calc(24 / 16 * 1rem);
             display: flex;
             flex-direction: column;
@@ -729,7 +729,7 @@
             height: clamp(12.25rem, 25vw, 15.625rem);
             margin-bottom: calc(-100 / 16 * 1rem);
             border-radius: 50%;
-            background-color: #e8e8e8;
+            background-color: #ececec;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1110,311 +1110,7 @@
 }
 
 /*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    @keyframes floatAnimation {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-2rem);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes floatAnimation2 {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-3rem);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    #gallery-1374 {
-        padding: var(--sectionPadding);
-        position: relative;
-        z-index: 1;
-        background-color: #f5f5f5;
-        /* Prevents overflow from the image going off screen */
-        overflow: hidden;
-
-        .cs-container {
-            width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
-
-        .cs-topper {
-            color: var(--secondary);
-        }
-
-        .cs-image-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: 1fr;
-            /* 16px - 60px */
-            gap: clamp(1rem, 4.3vw, 3.75rem);
-        }
-
-        .cs-link {
-            text-decoration: none;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: calc(16 / 16 * 1rem);
-        }
-
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            grid-column: span 12;
-
-            &:hover {
-                .cs-h3,
-                .cs-desc {
-                    color: #fff;
-                }
-
-                .cs-item-text {
-                    background-color: var(--primary);
-                }
-
-                .cs-icon-wrapper {
-                    border-color: #fff;
-                }
-
-                .cs-icon {
-                    filter: brightness(1000%) grayscale(1);
-                }
-            }
-        }
-
-        .cs-picture {
-            width: 100%;
-            /* 344px - 420px */
-            height: clamp(21.5rem, 30vw, 26.25rem);
-            margin: auto;
-            border-radius: calc(24 / 16 * 1rem);
-            display: block;
-            position: relative;
-            overflow: hidden;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-
-        .cs-item-text {
-            /* 16px - 20px top & bottom, 16px - 40px left & right */
-            padding: clamp(1rem, 2vw, 1.25rem) clamp(1rem, 2.8vw, 2.5rem);
-            background-color: #f7f7f7;
-            border-radius: calc(24 / 16 * 1rem);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* makes the item text the element that grows to fill the container */
-            flex-grow: 1;
-            gap: calc(16 / 16 * 1rem);
-            transition: background-color 0.3s;
-        }
-
-        .cs-flex {
-            display: flex;
-            flex-direction: column;
-            gap: calc(8 / 16 * 1rem);
-        }
-
-        .cs-h3 {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
-            line-height: 1.2em;
-            text-align: left;
-            margin: 0;
-            color: #1a1a1a;
-            transition: color 0.3s;
-        }
-
-        .cs-desc {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.2vw, 1rem);
-            line-height: 1.5em;
-            color: #1a1a1a;
-            transition: color 0.3s;
-        }
-
-        .cs-icon-wrapper {
-            width: calc(48 / 16 * 1rem);
-            height: calc(48 / 16 * 1rem);
-            border: 1px solid #bababa;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* prevents the parent flexbox from shrinking the icon */
-            flex-shrink: 0;
-            transition: border-color 0.3s;
-        }
-
-        .cs-icon {
-            width: auto;
-            height: calc(12 / 16 * 1rem);
-            transition: filter 0.3s;
-        }
-
-        .cs-button-solid {
-            font-size: calc(16 / 16 * 1rem);
-            font-weight: 700;
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-align: center;
-            text-decoration: none;
-            min-width: calc(150 / 16 * 1rem);
-            margin: 0;
-            overflow: hidden;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            padding: 0 calc(24 / 16 * 1rem);
-            color: #fff;
-            background-color: var(--primary);
-            border-radius: calc(48 / 16 * 1rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-
-            &:before {
-                content: "";
-                width: 0%;
-                height: 100%;
-                background: #000;
-                opacity: 1;
-                border-radius: calc(4 / 16 * 1rem);
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
-        }
-
-        .cs-bubbles {
-            width: calc(415 / 16 * 1rem);
-            height: calc(546 / 16 * 1rem);
-            position: absolute;
-            right: calc(-164 / 16 * 1rem);
-            bottom: calc(-46 / 16 * 1rem);
-            z-index: -1;
-
-            &:before {
-                /* white border bubble */
-                content: "";
-                width: calc(341 / 16 * 1rem);
-                height: calc(341 / 16 * 1rem);
-                background: transparent;
-                opacity: 1;
-                border: 1px solid #1a1a1a;
-                border-radius: 50%;
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                animation-name: floatAnimation;
-                animation-duration: 5s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-            }
-
-            &:after {
-                /* orange bubble */
-                content: "";
-                width: calc(341 / 16 * 1rem);
-                height: calc(341 / 16 * 1rem);
-                background: var(--primary);
-                opacity: 0.1;
-                border-radius: 50%;
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: -1;
-                animation-name: floatAnimation2;
-                animation-duration: 14s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-            }
-        }
-    }
-}
-
-/* In Between - 600px */
-@media only screen and (min-width: 37.5rem) {
-    #gallery-1374 {
-        .cs-item {
-            grid-column: span 6;
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #gallery-1374 {
-            .cs-title,
-            .cs-text,
-            .cs-h3 {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-text {
-                opacity: 0.8;
-            }
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---         Services           -->
+<---         Process           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -1422,7 +1118,7 @@
     #services-1290 {
         padding: var(--sectionPadding);
         position: relative;
-        background-color: #ececec;
+        background-color: #f5f5f5;
 
         .cs-container {
             /* changes to 1440px at tablet */
@@ -1470,7 +1166,7 @@
 
         .cs-item {
             list-style: none;
-            background-color: #fff;
+            background-color: #f5f5f5;
             grid-column: span 12;
             position: relative;
             z-index: 1;
@@ -1496,7 +1192,7 @@
                 width: calc(20 / 16 * 1rem);
                 height: calc(80 / 16 * 1rem);
                 margin: calc(16 / 16 * 1rem) auto;
-                background-image: url(https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-orange.svg);
+                background-image: url(/assets/svgs/arrow-side.svg);
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -1588,25 +1284,6 @@
             margin: 0;
             color: var(--bodyTextColor);
         }
-
-        .cs-background {
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 25%;
-            width: 100%;
-            opacity: 0.5;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
     }
 }
 
@@ -1630,7 +1307,7 @@
                 width: calc(120 / 16 * 1rem);
                 height: calc(28 / 16 * 1rem);
                 margin: 0;
-                background-image: url(https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-orange-large.svg);
+                background-image: url(/assets/svgs/arrow-large.svg);
                 position: absolute;
                 bottom: calc(-40 / 16 * 1rem);
                 left: clamp(8.5rem, 18vw, 18.5rem);
@@ -1694,7 +1371,7 @@
 @media only screen and (min-width: 0rem) {
     #sbs-1373 {
         padding: var(--sectionPadding);
-        background-color: #f5f5f5;
+        background-color: #ececec;
 
         .cs-container {
             width: 100%;
@@ -1719,7 +1396,7 @@
         }
 
         .cs-topper {
-            color: #767676;
+            color: var(--primary);
         }
 
         .cs-title {
@@ -1980,7 +1657,7 @@
 @media only screen and (min-width: 0rem) {
     #contact-1388 {
         padding: var(--sectionPadding);
-        background-color: #ececec;
+        background-color: #f5f5f5;
         position: relative;
         z-index: 1;
 
@@ -2134,7 +1811,7 @@
             padding: 0;
             padding-left: calc(24 / 16 * 1rem);
             color: var(--headerColor);
-            background-color: #f7f7f7;
+            background-color: #ececec;
             border-radius: calc(8 / 16 * 1rem);
             border: none;
             /* prevents padding from adding to height and width */
@@ -2220,6 +1897,10 @@
 
         .cs-submit {
             width: auto;
+        }
+
+        .cs-ul {
+            margin-top: 3em;
         }
     }
 }
