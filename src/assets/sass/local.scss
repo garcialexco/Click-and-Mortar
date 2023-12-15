@@ -1669,6 +1669,12 @@
         position: relative;
         z-index: 1;
 
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
         .cs-container {
             width: 100%;
             /* changes to 1280px at tablet */
