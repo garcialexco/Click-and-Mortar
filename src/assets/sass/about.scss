@@ -641,7 +641,7 @@
             }
 
             .cs-item {
-                background-color: var(--dark);
+                background-color: var(--medium);
                 &:before {
                     opacity: 0.3;
                 }
@@ -742,10 +742,17 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #stats-316 {
+        background-color: var(--dark);
+
         .cs-card-group {
             max-width: calc(1280 / 16 * 1rem);
             flex-wrap: nowrap;
             justify-content: space-evenly;
+        }
+
+        .cs-desc {
+            color: #fff;
+            opacity: 0.8;
         }
     }
 }
