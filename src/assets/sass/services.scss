@@ -188,10 +188,10 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #services-1378 {
-            background-color: var(--medium);
+            background-color: var(--dark);
 
             .cs-item {
-                background-color: var(--dark);
+                background-color: var(--medium);
 
                 &:hover {
                     background-color: var(--accent);
@@ -551,7 +551,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #pricing-1386 {
-            background-color: var(--dark);
+            background-color: var(--medium);
 
             .cs-title,
             .cs-text {
@@ -567,7 +567,7 @@
             }
 
             .cs-flex {
-                background-color: var(--medium);
+                background-color: var(--dark);
             }
 
             .cs-ul {
@@ -628,7 +628,7 @@
 @media only screen and (min-width: 0rem) {
     #stats-316 {
         padding: var(--sectionPadding);
-        background-color: var(--medium);
+        background-color: var(--dark);
 
         .cs-card-group {
             width: 100%;
@@ -731,6 +731,12 @@
         background-color: #f5f5f5;
         position: relative;
         z-index: 1;
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
 
         .cs-container {
             width: 100%;
@@ -1003,7 +1009,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #contact-1388 {
-            background-color: var(--dark);
+            background-color: var(--medium);
             .cs-title,
             .cs-text,
             .cs-header,
@@ -1028,7 +1034,7 @@
             }
 
             .cs-form {
-                background-color: var(--medium);
+                background-color: var(--dark);
             }
 
             .cs-input {

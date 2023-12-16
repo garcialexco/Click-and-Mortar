@@ -52,8 +52,8 @@ permalink: '/'
     <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
     <!-- Background Image, background image added in the css at 1600px for parallax effect -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" src="/assets/images/hero.jpg">
-        <source media="(min-width: 601px)" src="/assets/images/hero.jpg">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.jpg">
         <img decoding="async" src="/assets/images/hero.jpg" alt="abstract art hero image" width="2250" height="1500" aria-hidden="true">
     </picture>
 </section>
@@ -67,9 +67,9 @@ permalink: '/'
         <div class="cs-image-group">
             <picture class="cs-background">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" src="/assets/images/people10.jpg">
+                <source media="(max-width: 600px)" srcset="/assets/images/people10.jpg">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" src="/assets/images/people10.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/people10.jpg">
                 <img loading="lazy" decoding="async" src="/assets/images/people10.jpg" alt="people" width="605868" height="690">
             </picture>
             <div class="cs-box">
@@ -337,9 +337,9 @@ permalink: '/'
                 <a href="/contact" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
-                            src="/assets/images/construction-book.png">
+                            srcset="/assets/images/construction-book.png">
                         <source media="(min-width: 601px)"
-                            src="/assets/images/construction-book.png">
+                            srcset="/assets/images/construction-book.png">
                         <img loading="lazy" decoding="async"
                             src="/assets/images/construction-book.png"
                             alt="consulatation notes" width="413" height="240" aria-hidden="true">
@@ -357,9 +357,9 @@ permalink: '/'
                 <a href="/services" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
-                            src="/assets/images/wireframe.jpg">
+                            srcset="/assets/images/wireframe.jpg">
                         <source media="(min-width: 601px)"
-                            src="/assets/images/wireframe.jpg">
+                            srcset="/assets/images/wireframe.jpg">
                         <img loading="lazy" decoding="async"
                             src="/assets/images/wireframe.jpg"
                             alt="wireframe design" width="413" height="240" aria-hidden="true">
@@ -377,9 +377,9 @@ permalink: '/'
                 <a href="/about" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
-                            src="/assets/images/code.jpg">
+                            srcset="/assets/images/code.jpg">
                         <source media="(min-width: 601px)"
-                            src="/assets/images/code.jpg">
+                            srcset="/assets/images/code.jpg">
                         <img loading="lazy" decoding="async"
                             src="/assets/images/code.jpg"
                             alt="computer code" width="413" height="240" aria-hidden="true">
@@ -397,9 +397,9 @@ permalink: '/'
                 <a href="/contact" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
-                            src="/assets/images/launch.jpg">
+                            srcset="/assets/images/launch.jpg">
                         <source media="(min-width: 601px)"
-                            src="/assets/images/launch.jpg">
+                            srcset="/assets/images/launch.jpg">
                         <img loading="lazy" decoding="async"
                             src="/assets/images/launch.jpg"
                             alt="variety of devices" width="413" height="240" aria-hidden="true">
@@ -434,10 +434,10 @@ permalink: '/'
         <div class="cs-flex">
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" src="/assets/images/cafe.jpg">
+                <source media="(max-width: 600px)" srcset="/assets/images/cafe.jpg">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" src="/assets/images//People/cafe.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images//cafe.jpg" alt="people in cafe" width="414" height="627">
+                <source media="(min-width: 601px)" srcset="/assets/images/cafe.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/cafe.jpg" alt="people in cafe" width="414" height="627">
             </picture>
             <div class="cs-review">
                 <img class="cs-icon" loading="lazy" decoding="async" aria-hidden="true" src="/assets/svgs/quotes.svg" alt="appliance" width="120" height="99">
@@ -498,6 +498,10 @@ permalink: '/'
             <label class="cs-label cs-phone">
                 Phone
                 <input class="cs-input" required type="number" id="phone-1388" name="phone" placeholder="Phone">
+            </label>
+            <label>
+                How Did You Find Us?
+                <input type="text" id="find" name="find-us" placeholder="How did you find us?">
             </label>
             <label class="cs-label">
                 Message

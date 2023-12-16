@@ -1291,7 +1291,6 @@ html {
         padding: clamp(10.9375rem, 20vw, 16.25rem) calc(16 / 16 * 1rem)
             clamp(6.25rem, 14vw, 12vw);
         position: relative;
-        z-index: 1;
         /* clips svg wave from causing overflow issues */
         overflow: hidden;
 
