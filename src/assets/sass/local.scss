@@ -1084,8 +1084,9 @@
         .cs-desc {
             font-size: var(--bodyFontSize);
             line-height: 1.5em;
-            color: #858585;
+            color: #fff;
             display: block;
+            opacity: 0.8;
         }
     }
 }
