@@ -47,20 +47,20 @@
         <script defer src="/assets/js/nav.js"></script>
         <script defer src="/assets/js/dark.js"></script>
 
+        <!--  Google tag (gtag.js) -->
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=G-DEC00CTFCN"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DEC00CTFCN');
+        </script>
+
         {% block head %}{% endblock %}
 
         <!--For home page, use service keywords for the title, including location for SEO.
         Other pages should just include the page name. -->
-        
-        <!--  Google tag (gtag.js) -->
-            <script defer src="https://www.googletagmanager.com/gtag/js?id=G-DEC00CTFCN"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-DEC00CTFCN');
-            </script>
 
         <!--EXAMPLE:
         Home page - House Painting Contractors | Painters and Co. | TestCity, WA
