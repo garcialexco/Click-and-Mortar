@@ -236,7 +236,7 @@ permalink: '/'
 <!--                  Pricing                     -->
 <!-- ============================================ -->
 
-<section id="pricing-1386">
+<section id="pricing-1387">
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Our Pricing</span>
@@ -244,23 +244,68 @@ permalink: '/'
             <p class="cs-text">
                 Unlock the power of a robust online presence without breaking the bank. Our pricing is designed with small businesses in mind, offering a comprehensive web solution at a budget-friendly, all-inclusive rate. No hidden fees, no surprises—just straightforward pricing for your success in the digital realm.
             </p>
+            <div class="cs-toggle-group">
+                <span id="cs-option1-1387" class="cs-plan">Monthly Plan</span>
+                <div class="cs-toggle" aria-label="click to switch plans pricing">
+                    <span aria-hidden="true" class="cs-toggle-switch"></span>
+                </div>
+                <span id="cs-option2-1387" class="cs-plan">Website Only</span>
+            </div>
         </div>
-        <ul class="cs-card-group">
+        <ul class="cs-card-group cs-option1">
             <li class="cs-item cs-popular">
                 <div class="cs-flex">
-                    <span class="cs-package">5-Page Website</span>
+                    <span class="cs-package">Standard Pack</span>
                     <span class="cs-price">
-                        $3,000
+                        $300
+                        <span class="cs-duration">/Month</span>
                     </span>
                     <div class="cs-tag">
-                        <img class="cs-icon" aria-hidden="true" src="/assets/svgs/fire.svg" decoding="async" alt="fire" width="16" height="16">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
                         Hot Deal
                     </div>
                 </div>
                 <div class="cs-info">
                     <ul class="cs-ul">
+                        <li class="cs-li">5 Page Website</li>
+                        <li class="cs-li">Mobile-Optimized</li>
+                        <li class="cs-li">Free Custom Domain</li>
+                        <li class="cs-li">No Down Payment</li>
+                        <li class="cs-li">Outstanding Support</li>
+                    </ul>
+                    <a href="/contact" class="cs-button-transparent">Get Now</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Lifetime Support</span>
+                    <span class="cs-price">
+                        $0
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">Unlimited Edits</li>
+                        <li class="cs-li">24/7 Unlimited Support</li>
+                        <li class="cs-li">Forever Hosting</li>
+                        <li class="cs-li">Included!</li>
+                    </ul>
+                    <a href="/services" class="cs-button-transparent">Plans</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="cs-card-group cs-option2">
+            <li class="cs-item cs-popular">
+                <div class="cs-flex">
+                    <span class="cs-package">5 Page Website</span>
+                    <span class="cs-price">
+                        $3k
+                    </span>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
                         <li class="cs-li">Half Up Front</li>
-                        <li class="cs-li">Half After Completion</li> 
+                        <li class="cs-li">Half After Completion</li>
                         <li class="cs-li">Mobile-Optimized</li>
                         <li class="cs-li">Custom Domain</li>
                         <li class="cs-li">Outstanding Support</li>
@@ -270,20 +315,20 @@ permalink: '/'
             </li>
             <li class="cs-item">
                 <div class="cs-flex">
-                    <span class="cs-package">Lifetime Hosting</span>
+                    <span class="cs-package">Hosting</span>
                     <span class="cs-price">
                         $0
-                        <span class="cs-duration"> Forever</span>
+                        <span class="cs-duration">Forever</span>
                     </span>
                 </div>
                 <div class="cs-info">
                     <ul class="cs-ul">
                         <li class="cs-li">5 Free Revisions</li>
-                        <li class="cs-li">Built-in Speed</li>
-                        <li class="cs-li">Reliable Hosting</li>
+                        <li class="cs-li">Built-In Speed</li>
+                        <li class="cs-li">Relaible Hosting</li>
                         <li class="cs-li">Included!</li>
                     </ul>
-                    <a href="/about" class="cs-button-transparent" aria-label="Read more">Plans</a>
+                    <a href="/services" class="cs-button-transparent">Plans</a>
                 </div>
             </li>
         </ul>
@@ -519,6 +564,34 @@ permalink: '/'
         </form>
     </div>
 </section>
+
+<script>
+    const leftOption = document.querySelector("#pricing-1387 #cs-option1-1387");
+        const rightOption = document.querySelector("#pricing-1387 #cs-option2-1387");
+        const toggle = document.querySelector("#pricing-1387 .cs-toggle");
+        const cardGroup = Array.from(document.querySelectorAll('#pricing-1387 .cs-card-group'))
+        // when you click the middle toggle
+        toggle.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.toggle("cs-active");
+            }
+            toggle.classList.toggle("active");
+        });       
+        // when you click the left button option
+        leftOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.remove("cs-active");
+            }
+            toggle.classList.remove("active");
+        });    
+        // when you click the right button option
+        rightOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.add("cs-active");
+            }
+            toggle.classList.add("active");
+        });
+</script>
 
     {% include 'components/cta.html' %}
 {% endblock %}
